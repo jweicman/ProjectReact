@@ -11,14 +11,14 @@ const exists = (id) => {
 };
 
 const addItem = (item) => {
-    // if (exists(item.id)) {
-    //     alert("El producto ya existe en el carrito");
-    //     return;
-    // }
+    if (exists(item.id)) {
+        alert("El producto ya existe en el carrito");
+        return;
+    }
 
-    // setCart([...cart, item]);
-    // alert(`${item.name} agregado`);
-    alert(`OK`);
+    setCart([...cart, item]);
+    alert(`${item.name} agregado`);
+    // alert("OK");
 };
 
 const clearCart = () => {

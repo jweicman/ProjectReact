@@ -22,7 +22,7 @@ export const ItemDetailContainer = () => {
                 setDetail(found);
             } else {
                 throw new error("No se encontro el detalle");
-            };
+            }
         })
         .catch((err)=>{
             console.log("err");
