@@ -12,7 +12,7 @@ export const ItemDetailContainer = () => {
                 if(!res.ok) {
                     throw new error("No se encontro el detalle");
                     
-                }
+                };
                 return res.json();
             }
         )
@@ -22,12 +22,12 @@ export const ItemDetailContainer = () => {
                 setDetail(found);
             } else {
                 throw new error("No se encontro el detalle");
-            }
+            };
         })
         .catch((err)=>{
             console.log("err");
         });
-    },[id])
+    },[id]);
     return (
         <main>
             {Object.keys(detail).length ?(
@@ -37,4 +37,4 @@ export const ItemDetailContainer = () => {
             )}
         </main>
         );
-}
+};
