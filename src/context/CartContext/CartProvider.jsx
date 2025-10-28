@@ -18,7 +18,6 @@ const addItem = (item) => {
 
     setCart([...cart, item]);
     alert(`${item.name} agregado`);
-    // alert("OK");
 };
 
 const clearCart = () => {
@@ -34,5 +33,5 @@ const getTotalItems = () => {
 const values = {cart, addItem, clearCart, getTotalItems};
 
 
-    return <CartContext.Provider value={{}}>{children}</CartContext.Provider>;
+    return <CartContext.Provider value={values}>{children}</CartContext.Provider>;
 };
