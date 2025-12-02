@@ -1,0 +1,26 @@
+[33mcommit 57912a69b20bb3c2b7bbbca09a33703aa91badcf[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmaster[m[33m)[m
+Author: Jontahan Weicman <jweicman@gmail.com>
+Date:   Tue Oct 28 09:04:42 2025 -0300
+
+    update
+
+[1mdiff --git a/src/context/CartContext/CartProvider.jsx b/src/context/CartContext/CartProvider.jsx[m
+[1mindex f58705d..f844c95 100644[m
+[1m--- a/src/context/CartContext/CartProvider.jsx[m
+[1m+++ b/src/context/CartContext/CartProvider.jsx[m
+[36m@@ -18,7 +18,6 @@[m [mconst addItem = (item) => {[m
+ [m
+     setCart([...cart, item]);[m
+     alert(`${item.name} agregado`);[m
+[31m-    // alert("OK");[m
+ };[m
+ [m
+ const clearCart = () => {[m
+[36m@@ -34,5 +33,5 @@[m [mconst getTotalItems = () => {[m
+ const values = {cart, addItem, clearCart, getTotalItems};[m
+ [m
+ [m
+[31m-    return <CartContext.Provider value={{}}>{children}</CartContext.Provider>;[m
+[32m+[m[32m    return <CartContext.Provider value={values}>{children}</CartContext.Provider>;[m
+ };[m
+\ No newline at end of file[m
