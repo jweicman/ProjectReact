@@ -34,7 +34,7 @@ const clearCart = () => {
     setCart([]);
 };
 
-const deletedItem = (id) => {
+const deleteItem = (id) => {
     const filtered = cart.filter((p)=> p.id!==id);
     setCart(filtered);
     alert("Producto eliminado");
@@ -58,7 +58,7 @@ const checkOut = () => {
     const ok = confirm("Desea terminar la compra?");
     clearCart();
 }
-const values = {cart, addItem, clearCart, getTotalItems, deletedItem,total, checkOut};
+const values = {cart, addItem, clearCart, getTotalItems, deleteItem,total, checkOut};
 
 
     return <CartContext.Provider value={values}>{children}</CartContext.Provider>;
